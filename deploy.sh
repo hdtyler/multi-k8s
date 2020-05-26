@@ -11,6 +11,6 @@ docker push hdtyler/multi-server:$SHA
 docker push hdtyler/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/client-deployment client=hdtyler/client-deployment:$SHA
-kubectl set image deployments/server-deployment server=hdtyler/server-deployment:$SHA
-kubectl set image deployments/worker-deployment worker=hdtyler/worker-deployment:$SHA
+kubectl set image deployments/client-deployment client=hdtyler/multi-client:$SHA
+kubectl set image deployments/server-deployment server=hdtyler/multi-server:$SHA
+kubectl set image deployments/worker-deployment worker=hdtyler/multi-worker:$SHA
